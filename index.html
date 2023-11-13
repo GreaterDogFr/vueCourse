@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue avec le CDN</title>
+  <!-- Import Styles -->
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <!-- Import Vue.js -->
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="navbar"></div>
+    <div class="product-display">
+      <div class="product-container">
+        <div class="product-image">
+          <a v-bind:href="url">
+            <img v-bind:src="image" alt="chaussettes">
+          </a>
+        </div>
+        <div class="product-info">
+          <h1>{{product}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Js -->
+  <script src="./main.js"></script>
+
+  <script>
+    const mountedApp = app.mount('#app')
+  </script>
+</body>
+
+</html>
